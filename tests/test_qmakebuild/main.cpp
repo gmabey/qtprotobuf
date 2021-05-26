@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2020 Alexey Edelev <semlanik@gmail.com>
+ * Copyright (c) 2021 Glen Mabey <gmabey@gmail.com>
  *
  * This file is part of QtProtobuf project https://git.semlanik.org/semlanik/qtprotobuf
  *
@@ -24,8 +24,7 @@
  */
 
 #include <QCoreApplication>
-
-#include <QtProtobufTypes>
+#include "generated/test1.qpb.h"
 
 int main(int argc, char *argv[])
 {

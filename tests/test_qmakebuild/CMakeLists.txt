@@ -1,10 +1,8 @@
-#set(TARGET wellknowntypes_test)
 project(qmakebuild_test)
-
+find_package(Qt5 COMPONENTS Core REQUIRED)
 get_target_property (QT_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
-
 add_custom_target(qmakebuild_test ALL
-        COMMAND ${QT_QMAKE_EXECUTABLE} -o QMakefile ${CMAKE_CURRENT_SOURCE_DIR}/qmakebuild.pro
+        COMMAND ${QT_QMAKE_EXECUTABLE} -o QMakefile ${CMAKE_CURRENT_SOURCE_DIR}/qmakebuild.pro CMAKE_CURRENT_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}
         COMMAND make -f QMakefile 
 )
 
